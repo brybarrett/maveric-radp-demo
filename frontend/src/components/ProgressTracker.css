@@ -1,0 +1,219 @@
+/* ============================================
+   PROGRESS TRACKER - ENTERPRISE CLEAN
+   ============================================ */
+.progress-tracker {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.progress-stages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   STAGE ELEMENTS
+   ============================================ */
+.progress-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.stage-indicator {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-tertiary);
+}
+
+.stage-number {
+  display: block;
+}
+
+.stage-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* ============================================
+   STAGE STATES
+   ============================================ */
+/* Completed Stage */
+.progress-stage.completed .stage-indicator {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.progress-stage.completed .stage-label {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Current Stage */
+.progress-stage.current .stage-indicator {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+  transform: scale(1.1);
+}
+
+.progress-stage.current .stage-label {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+/* Upcoming Stage */
+.progress-stage.upcoming .stage-indicator {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
+}
+
+.progress-stage.upcoming .stage-label {
+  color: var(--text-tertiary);
+}
+
+/* Hover Effects */
+.progress-stage:hover .stage-indicator {
+  transform: scale(1.05);
+}
+
+.progress-stage.current:hover .stage-indicator {
+  transform: scale(1.15);
+}
+
+/* ============================================
+   CONNECTOR LINE
+   ============================================ */
+.progress-connector {
+  flex: 1;
+  height: 2px;
+  position: relative;
+  margin: 0 8px;
+  margin-bottom: 36px;
+}
+
+.connector-line {
+  height: 100%;
+  background: var(--border-color);
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.progress-connector.completed .connector-line {
+  background: #10b981;
+}
+
+.progress-connector.completed .connector-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .progress-tracker {
+    padding: 20px 24px;
+  }
+
+  .stage-indicator {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8125rem;
+  }
+
+  .stage-label {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-tracker {
+    padding: 16px 20px;
+    overflow-x: auto;
+  }
+
+  .progress-stages {
+    min-width: 600px;
+  }
+
+  .stage-indicator {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stage-label {
+    font-size: 0.75rem;
+  }
+
+  .progress-connector {
+    margin: 0 4px;
+    margin-bottom: 32px;
+  }
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+.dark-mode .progress-tracker {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+.dark-mode .stage-indicator {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-color);
+}
+
+.dark-mode .progress-stage.current .stage-indicator {
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+}
+
+.dark-mode .connector-line {
+  background: var(--border-color);
+}

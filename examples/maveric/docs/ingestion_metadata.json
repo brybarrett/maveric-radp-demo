@@ -1,0 +1,81 @@
+{
+  "repository": "lf-connectivity/maveric",
+  "branch": "main",
+  "ingestion_method": "targeted_fetch",
+  "statistics": {
+    "files_attempted": 16,
+    "files_downloaded": 13,
+    "files_not_found": 3,
+    "files_failed": 0,
+    "total_size": 40938
+  },
+  "file_list": [
+    {
+      "original_path": "README.md",
+      "saved_as": "README.md",
+      "size": 19875
+    },
+    {
+      "original_path": "README-DEV.md",
+      "saved_as": "README-DEV.md",
+      "size": 4871
+    },
+    {
+      "original_path": "README-NOTEBOOKS.md",
+      "saved_as": "README-NOTEBOOKS.md",
+      "size": 1158
+    },
+    {
+      "original_path": "LICENSE",
+      "saved_as": "LICENSE",
+      "size": 1088
+    },
+    {
+      "original_path": "CONTRIBUTING.md",
+      "saved_as": "CONTRIBUTING.md",
+      "size": 1260
+    },
+    {
+      "original_path": "apps/example/example_app.py",
+      "saved_as": "apps_example_example_app.py",
+      "size": 6265
+    },
+    {
+      "original_path": "apps/coverage_capacity_optimization/cco_example_app.py",
+      "saved_as": "apps_coverage_capacity_optimization_cco_example_app.py",
+      "size": 3136
+    },
+    {
+      "original_path": ".env-prod",
+      "saved_as": ".env-prod",
+      "size": 88
+    },
+    {
+      "original_path": "dc.yml",
+      "saved_as": "dc.yml",
+      "size": 1843
+    },
+    {
+      "original_path": "dc-prod.yml",
+      "saved_as": "dc-prod.yml",
+      "size": 766
+    },
+    {
+      "original_path": "dc-cuda.yml",
+      "saved_as": "dc-cuda.yml",
+      "size": 462
+    },
+    {
+      "original_path": "radp/client/requirements.txt",
+      "saved_as": "radp_client_requirements.txt",
+      "size": 60
+    },
+    {
+      "original_path": "apps/requirements.txt",
+      "saved_as": "apps_requirements.txt",
+      "size": 66
+    }
+  ],
+  "timestamp": "2025-10-16T08:55:32.282085",
+  "version": "2.0"
+}

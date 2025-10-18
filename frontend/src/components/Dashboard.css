@@ -1,0 +1,267 @@
+/* ============================================
+   DASHBOARD LAYOUT - ENTERPRISE CLEAN
+   ============================================ */
+.dashboard {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.dashboard-main.sidebar-collapsed {
+  margin-left: 80px;
+}
+
+/* ============================================
+   DASHBOARD HEADER - SIMPLIFIED
+   ============================================ */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: linear-gradient(135deg, #003B5C 0%, #0066CC 100%);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px var(--shadow-sm);
+}
+
+.dark-mode .dashboard-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-left h1 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.025em;
+  color: white;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ============================================
+   DASHBOARD CONTENT (Messages Area)
+   ============================================ */
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg-secondary);
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease;
+}
+
+.messages-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  min-height: 100%;
+}
+
+.dashboard-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dashboard-content::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+  border: 2px solid var(--bg-tertiary);
+}
+
+.dashboard-content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* ============================================
+   DASHBOARD FOOTER (Input Area)
+   ============================================ */
+.dashboard-footer {
+  flex-shrink: 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  padding: 0;
+  box-shadow: 0 -2px 8px var(--shadow-sm);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboard-footer .input-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .dashboard-main {
+    margin-left: 80px;
+  }
+  
+  .messages-container {
+    padding: 32px 24px;
+    max-width: 100%;
+  }
+  
+  .dashboard-header {
+    padding: 18px 24px;
+  }
+  
+  .header-left h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    margin-left: 0;
+  }
+  
+  .dashboard-header {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .header-left {
+    gap: 12px;
+  }
+  
+  .header-left h1 {
+    font-size: 1.125rem;
+  }
+  
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  
+  .header-right {
+    gap: 10px;
+  }
+  
+  .messages-container {
+    padding: 24px 16px;
+  }
+  
+  .dashboard-footer .input-box {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .messages-container {
+    padding: 20px 12px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.dashboard-header * {
+  color: white;
+}
+
+.dark-mode .dashboard-header h1,
+.dark-mode .dashboard-header .status-badge {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.header-right button,
+.header-right select {
+  min-height: 36px;
+}
+
+/* ============================================
+   PERFORMANCE
+   ============================================ */
+.dashboard-content {
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch;
+}
+
+.message-bubble {
+  will-change: transform, opacity;
+}

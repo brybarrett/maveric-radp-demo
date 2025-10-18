@@ -1,0 +1,28 @@
+{
+  "client_name": "DocBot Demo",
+  "docs_path": "examples/demo/docs/",
+  "system_prompt": "You are a friendly and helpful documentation assistant demonstrating DocBot's capabilities. Explain how DocBot works, showcase its features, and help users understand how it can transform their documentation. Be conversational, provide examples, and offer to demonstrate visualizations. Always be enthusiastic about the possibilities of AI-powered documentation.",
+  "modules": [
+    "Getting Started",
+    "Features",
+    "Architecture",
+    "Customization",
+    "Integration"
+  ],
+  "enable_visualizations": true,
+  "enable_code_snippets": true,
+  "conversation_modes": {
+    "full_overview": {
+      "name": "Full Demo Tour",
+      "description": "Comprehensive walkthrough of DocBot's capabilities"
+    },
+    "module_deep_dive": {
+      "name": "Feature Deep-Dive",
+      "description": "Detailed exploration of specific DocBot features"
+    },
+    "general": {
+      "name": "General Q&A",
+      "description": "Ask anything about DocBot"
+    }
+  }
+}

@@ -1,0 +1,348 @@
+/* ============================================
+   GUIDED TOUR - ENTERPRISE CLEAN
+   ============================================ */
+.guided-tour {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   TOUR WELCOME SCREEN
+   ============================================ */
+.tour-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 40px 20px;
+}
+
+.tour-welcome-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.tour-welcome-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.tour-welcome-content p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  transition: color 0.3s ease;
+}
+
+.tour-welcome-options {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tour-btn {
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+.tour-btn-primary {
+  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.tour-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+}
+
+.tour-btn-primary:active {
+  transform: translateY(0);
+}
+
+.tour-btn-secondary {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.tour-btn-secondary:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--brand-primary);
+}
+
+/* ============================================
+   TOUR STAGE CONTENT
+   ============================================ */
+.tour-stage-content {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px var(--shadow-sm);
+  transition: all 0.3s ease;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tour-stage-header {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tour-stage-number {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.tour-stage-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+/* ============================================
+   TOUR STAGE BODY
+   ============================================ */
+.tour-stage-body {
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.tour-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 24px 0 12px 0;
+  transition: color 0.3s ease;
+}
+
+.tour-section-title:first-child {
+  margin-top: 0;
+}
+
+.tour-paragraph {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 16px 0;
+  transition: color 0.3s ease;
+}
+
+.tour-list {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.tour-list li {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 8px 0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.tour-list li::marker {
+  color: var(--brand-primary);
+}
+
+/* ============================================
+   TOUR ACTIONS
+   ============================================ */
+.tour-stage-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.tour-action-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.tour-action-btn.primary {
+  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);
+  flex: 1;
+  min-width: 200px;
+}
+
+.tour-action-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.tour-action-btn.primary:active {
+  transform: translateY(0);
+}
+
+.tour-action-btn.secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.tour-action-btn.secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.tour-action-btn.tertiary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.tour-action-btn.tertiary:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .tour-welcome-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .tour-welcome-content p {
+    font-size: 1rem;
+  }
+
+  .tour-btn {
+    padding: 12px 24px;
+    font-size: 0.9375rem;
+  }
+
+  .tour-stage-content {
+    padding: 24px 20px;
+  }
+
+  .tour-stage-title {
+    font-size: 1.5rem;
+  }
+
+  .tour-stage-actions {
+    flex-direction: column;
+  }
+
+  .tour-action-btn {
+    width: 100%;
+  }
+
+  .tour-action-btn.primary {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-welcome {
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  .tour-welcome-content h2 {
+    font-size: 1.375rem;
+  }
+
+  .tour-stage-content {
+    padding: 20px 16px;
+  }
+
+  .tour-stage-title {
+    font-size: 1.25rem;
+  }
+
+  .tour-section-title {
+    font-size: 1rem;
+  }
+
+  .tour-paragraph,
+  .tour-list li {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+.dark-mode .tour-stage-content {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+.dark-mode .tour-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-color);
+}
+
+.dark-mode .tour-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .tour-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .tour-action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .tour-action-btn.tertiary {
+  background: transparent;
+}
+
+.dark-mode .tour-action-btn.tertiary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}

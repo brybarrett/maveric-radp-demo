@@ -1,0 +1,80 @@
+{
+  "client_name": "Maveric RADP",
+  "client_full_name": "RIC Algorithm Development Platform (RADP)",
+  "client_description": "AI-powered platform for developing and evaluating cellular network optimization algorithms before deployment",
+  "client_organization": "LF Connectivity",
+  "organization_url": "https://lfconnectivity.dev",
+  "repository_url": "https://github.com/lf-connectivity/maveric",
+  
+  "modules": [
+    {
+      "name": "Digital Twin Training",
+      "description": "Train RF Digital Twin models using real-world cellular network measurements",
+      "keywords": ["training", "digital twin", "RF model", "machine learning"]
+    },
+    {
+      "name": "UE Tracks",
+      "description": "User Equipment movement simulation and track data generation",
+      "keywords": ["ue tracks", "mobility", "gaussian markov", "movement simulation"]
+    },
+    {
+      "name": "RF Prediction",
+      "description": "Signal strength prediction using trained Digital Twin models",
+      "keywords": ["rf prediction", "rsrp", "signal strength", "coverage"]
+    },
+    {
+      "name": "Simulation Orchestration",
+      "description": "End-to-end RIC simulation workflow management",
+      "keywords": ["simulation", "orchestration", "workflow", "ric"]
+    },
+    {
+      "name": "Coverage & Capacity Optimization",
+      "description": "CCO algorithms for network optimization",
+      "keywords": ["cco", "optimization", "capacity", "coverage"]
+    }
+  ],
+  
+  "conversation_modes": {
+    "full_overview": {
+      "name": "Full Overview",
+      "icon": "📚",
+      "description": "Step-by-step guide through complete workflows"
+    },
+    "module_deep_dive": {
+      "name": "Module Deep-Dive",
+      "icon": "🔍",
+      "description": "In-depth exploration of specific components"
+    },
+    "quick_answer": {
+      "name": "Quick Answer",
+      "icon": "⚡",
+      "description": "Fast answers to specific questions"
+    }
+  },
+  
+  "enable_visualizations": true,
+  "enable_code_examples": true,
+  "enable_workflow_diagrams": true,
+  
+  "sample_questions": [
+    "How do I train a Digital Twin model?",
+    "What is UE Tracks and how do I generate movement data?",
+    "Explain the RF Prediction workflow",
+    "How do I run a complete RIC simulation?",
+    "What parameters can I configure for training?",
+    "Show me a Coverage and Capacity Optimization example"
+  ],
+  
+  "branding": {
+    "primary_color": "#0066CC",
+    "secondary_color": "#00A3E0",
+    "accent_color": "#6CC24A",
+    "theme": "lf-connectivity"
+  },
+  
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-15",
+    "documentation_source": "https://github.com/lf-connectivity/maveric"
+  }
+}
