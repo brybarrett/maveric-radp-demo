@@ -1,4 +1,4 @@
-﻿{
+{
   "client_name": "Maveric RADP",
   "modules": ["Digital Twin", "RF Prediction", "xApp Development"],
   "enable_visualizations": true
